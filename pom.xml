@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sujay.tutorials</groupId>
+  <artifactId>kafka</artifactId>
+  <version>0.1.0</version>
+  <packaging>pom</packaging>
+
+  <name>spring tutorials</name>
+  <description>The parent pom for tutorials</description>
+
+  <properties>
+    <!-- General dependencies -->
+    <project.packaging>jar</project.packaging>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <linkXRef>false</linkXRef>
+<!--    <input.yaml.file>gsp-mock-vehicle-v1.yaml</input.yaml.file>-->
+    <gsp.core.spring.version>0.1.0</gsp.core.spring.version>
+    <java.version>17</java.version>
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+
+    <!-- Specific dependencies metrics, jms, war packaging -->
+    <micrometer.registry.prometheus.version>1.10.4</micrometer.registry.prometheus.version>
+    <war.maven.plugin.version>3.3.2</war.maven.plugin.version>
+    <spring-boot-maven-plugin.version>2.7.14</spring-boot-maven-plugin.version>
+    <activemq-client.version>5.17.3</activemq-client.version>
+    <slf4j-api.version>2.0.12</slf4j-api.version>
+
+    <!-- Common dependencies, spring, openapi, plugins etc -->
+    <spring.boot.version>3.1.6</spring.boot.version>
+    <spring.security.version>6.1.5</spring.security.version>
+    <openapi.generator.version>7.2.0</openapi.generator.version>
+    <h2.version>2.2.224</h2.version>
+    <postgres.version>42.7.1</postgres.version>
+    <cucumber.spring.version>7.15.0</cucumber.spring.version>
+    <rest.assured.version>5.4.0</rest.assured.version>
+    <jackson.databind.nullable.version>0.2.6</jackson.databind.nullable.version>
+    <maven.source.plugin.version>3.3.0</maven.source.plugin.version>
+    <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+    <junit-platform.version>1.10.1</junit-platform.version>
+    <junit.jupiter.version>5.10.2</junit.jupiter.version>
+    <maven.surefire.plugin.version>3.2.2</maven.surefire.plugin.version>
+    <jakarta.validation.api.version>3.0.2</jakarta.validation.api.version>
+    <jakarta.servlet.api.version>6.0.0</jakarta.servlet.api.version>
+    <spring.kafka.version>3.0.17</spring.kafka.version>
+    <datafaker.version>2.3.1</datafaker.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>${spring.boot.version}</version>
+      <type>pom</type>
+    </dependency>
+  </dependencies>
+
+  <modules>
+    <module>kafka-topic</module>
+  </modules>
+
+</project>
